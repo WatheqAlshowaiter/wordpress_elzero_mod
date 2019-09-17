@@ -1,0 +1,23 @@
+
+/* Start Footer */
+.footer{
+    /* background-color: lightgray;    */
+    background-color: #0c0f12; 
+    color :#FFF;
+    padding: 20px; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+
+}
+
+.footer a{
+    color: gray; 
+}
+ .footer a:hover{
+     color: white;
+     text-decoration: underline; 
+ }
+
+/* End Footer */
