@@ -51,14 +51,36 @@ function watheq_add_script()
     wp_script_add_data('respond', "conditional", "lt IE 9");
 
     // adding my own script
-    wp_enqueue_script("main-js", get_template_directory_uri() . '/vendor/js/main.js', array(), false, true); 
+    wp_enqueue_script("main-js", get_template_directory_uri() . '/vendor/js/main.js', array(), false, true);
 }
 
+/**
+ * Function to make a custom menu to our theme 
+ * by @watheq 
+ */
 
+function first_theme_register_custom_menu()
+{
+    register_nav_menu("Bulma-framework-menu", __("1st theme Navigation"));
+}
+
+/**
+ * adding custom menu 
+ * by @watheq 
+ */
+
+function register_custom_menu()
+{
+    wp_nav_menu();
+}
 /**
  * 
  * Adding hooks to fire up our functions
  */
 
+//  actions to including scripts and styles
 add_action('wp_enqueue_scripts', 'watheq_add_style');
 add_action('wp_enqueue_scripts', 'watheq_add_script');
+
+// adding action to fire up menu after wordpress initialization 
+add_action("init", "first_theme_register_custom_menu");
