@@ -1,10 +1,20 @@
 <?php
 
+// requiring nav walker for bulma css 
+require_once('bulma-navwalker.php');
+
 /*
 *
-*   this is my functions 
+*   This is my functions 
 *
 */
+
+/**
+ * Add Feature Image Support 
+ *  
+ * */ 
+
+add_theme_support('post-thumbnails'); 
 
 /**
  * adding css to wordpress 
@@ -61,7 +71,12 @@ function watheq_add_script()
 
 function first_theme_register_custom_menu()
 {
-    register_nav_menu("Bulma-framework-menu", __("1st theme Navigation"));
+    // register_nav_menu("Bulma-framework-menu", __("1st theme Navigation"));
+    // this function is better becaues it had multible menus 
+    register_nav_menus(array(
+        "navbar-menu" => "Navigation Menu",
+        "footer-menu" => "Footer Menu",  // we can add menus as we wish!
+    ));
 }
 
 /**
@@ -71,7 +86,13 @@ function first_theme_register_custom_menu()
 
 function register_custom_menu()
 {
-    wp_nav_menu();
+    wp_nav_menu(array(
+        "theme_location" => "navbar-menu", // the names that registered in register_nav_menus() 
+        "menu_class" => "navbar-end  ",  // change the class of <ul> tag  
+        "container" => false, // no defaul container (from WordPress)
+        "depth" => 2, // how many sub items 
+        "walker" => new Navwalker(), // important to make library classes inside items and sub items
+     ));
 }
 /**
  * 

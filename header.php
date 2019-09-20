@@ -15,7 +15,7 @@
     <!-- New example -->
     <!-- <section class="hero is-info is-fullheight"> -->
     <div class="hero-head">
-        <nav class="navbar ">
+        <nav class="navbar is-black">
             <div class="container">
                 <div class="navbar-brand">
                     <a class="navbar-item ">
