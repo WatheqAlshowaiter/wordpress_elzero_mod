@@ -63,6 +63,7 @@ body {
 
 .main-post .post-content{
     line-height: 1.7; 
+    word-wrap: break-word; /** to make words fit just inside .div */ 
 }
 
 /* End Posts */

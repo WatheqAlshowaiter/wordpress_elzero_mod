@@ -29,9 +29,16 @@
                         <span class="post-author"><i class="fi-xnsuxl-user-solid"></i><?php the_author_posts_link() ?>, </span>
                         <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> <?php the_time('d -  m - Y'); ?>, </span>
                         <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> <?php the_time('d -  m - Y'); ?>, </span>
-                        <span class="post-comments"><i class="fi-swslxl-pen"></i> <?php comments_popup_link('No Comment', "one commnet", "% Comments", "comment-url", "Comment disabled")?></span>
+                        <span class="post-comments"><i class="fi-swslxl-pen"></i> <?php comments_popup_link('No Comment', "one commnet", "% Comments", "comment-url", "Comment disabled") ?></span>
+                        <!-- post thunmbnail with link to the post -->
+                        <a href="<?php permalink_link(); ?>" title="<?php the_title_attribute(); ?>">
+                            <?php the_post_thumbnail('large', ["class" => "image is-620x300x", "alt" => "place holder image", "title" => "post image"]); ?>
+                        </a>
+                        <div class="post-content">
+                            <?php the_content('Continue reading >>'); ?>
+                        </div>
                         <hr>
-                        <p class="categories"><i class="fi-xnsuxl-label-solid"></i><?php the_category(', ')?></p>
+                        <p class="categories"><i class="fi-xnsuxl-label-solid"></i><?php the_category(', ') ?></p>
                     </div>
                 </div>
             <?php endwhile;
