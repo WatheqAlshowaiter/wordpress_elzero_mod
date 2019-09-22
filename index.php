@@ -18,7 +18,20 @@
                 <div class="column is-6">
                     <div class="main-post">
                         <!-- the_tile(tags before it , tags after it) -->
-                        <?php the_title("<h3 class='post-title title'>", "</h3>"); ?>
+                        <!-- the_permalink(): give the link of the post  -->
+                        <!-- title: give tooltip to the post the_title_attribute() -->
+                        <h3 class="post-title title">
+                            <a href="<?php permalink_link(); ?> " rel="bookmark" title="Permenant to <? the_title_attribute(); ?>">
+                                <?php the_title(); ?>
+                            </a>
+                        </h3>
+                        <!-- post author  -->
+                        <span class="post-author"><i class="fi-xnsuxl-user-solid"></i><?php the_author_posts_link() ?>, </span>
+                        <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> <?php the_time('d -  m - Y'); ?>, </span>
+                        <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> <?php the_time('d -  m - Y'); ?>, </span>
+                        <span class="post-comments"><i class="fi-swslxl-pen"></i> <?php comments_popup_link('No Comment', "one commnet", "% Comments", "comment-url", "Comment disabled")?></span>
+                        <hr>
+                        <p class="categories"><i class="fi-xnsuxl-label-solid"></i><?php the_category(', ')?></p>
                     </div>
                 </div>
             <?php endwhile;
@@ -29,25 +42,25 @@
     </div> <!-- end .columns -->
 </div> <!-- end .container-->
 
-<div class="container">
+<!-- <div class="container"> -->
 <!-- Same as Bootstrap -->
-<div class="columns is-multiline">
+<!-- <div class="columns is-multiline"> -->
 <!-- .row in Bootstrap -->
-<div class="column is-6">
+<!-- <div class="column is-6"> -->
 <!-- .col in Bootstrap -->
-<div class="main-post">
+<!-- <div class="main-post"> -->
 <!-- important to add .title class in bulma -->
-<h3 class="post-title title">Just A Test Post</h3>
-< <span class="post-author"><i class="fi-xnsuxl-user-solid"></i> Watheq, </span> 
-                <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> 13/13/2013, </span>
+<!-- <h3 class="post-title title">Just A Test Post</h3> -->
+<!-- <span class="post-author"><i class="fi-xnsuxl-user-solid"></i> Watheq, </span>  -->
+<!-- <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> 13/13/2013, </span>
                 <span class="post-comments"><i class="fi-swslxl-pen"></i> 22 Comments</span>
                 <img src="http://placekitten.com/620/300" class="image is-620x300x" alt="Just a cat placehoder">
                 <span class="post-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, cum? Quae atque pariatur quaerat, assumenda et voluptatum culpa hic dicta eveniet nemo doloribus optio. Praesentium nihil accusantium dolor dignissimos reprehenderit.</span>
                 <hr>
                 <p class="categories"><i class="fi-xnsuxl-label-solid"></i> HTML, CSS, JS</p>
-            </div>
-        </div>
-</div> -->
+            </div> -->
+<!-- </div> -->
+<!-- </div>  -->
 
 <?php get_footer(); ?>
 
