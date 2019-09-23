@@ -34,8 +34,11 @@
                         <a href="<?php permalink_link(); ?>" title="<?php the_title_attribute(); ?>">
                             <?php the_post_thumbnail('large', ["class" => "image is-620x300x", "alt" => "place holder image", "title" => "post image"]); ?>
                         </a>
-                        <div class="post-content">
-                            <?php the_content('Continue reading >>'); ?>
+                        <div class="post-content" >
+                            <!-- the_content() uses <!\-- more --\> tag-->
+                            <?php //the_content('Continue reading >>'); ?>
+                            <?php   the_excerpt(); ?>
+                            <a href="<?php the_permalink(); ?>" rel="bookmark" title="Complete Reading <?php the_title_attribute(); ?>">Read More...</a>
                         </div>
                         <hr>
                         <p class="categories"><i class="fi-xnsuxl-label-solid"></i><?php the_category(', ') ?></p>

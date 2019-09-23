@@ -12,9 +12,9 @@ require_once('bulma-navwalker.php');
 /**
  * Add Feature Image Support 
  *  
- * */ 
+ * */
 
-add_theme_support('post-thumbnails'); 
+add_theme_support('post-thumbnails');
 
 /**
  * adding css to wordpress 
@@ -92,8 +92,27 @@ function register_custom_menu()
         "container" => false, // no defaul container (from WordPress)
         "depth" => 2, // how many sub items 
         "walker" => new Navwalker(), // important to make library classes inside items and sub items
-     ));
+    ));
 }
+
+/**
+ * changing length of the excerpt length
+ * by @watheq 
+ */
+function first_theme_excerpt_lenght($lenght)
+{
+    return 5;
+}
+
+/**
+ * changing length of the excerpt length
+ * by @watheq 
+ */
+function first_theme_change_default_excerpt_more($lenght)
+{
+    return '...'; // instead of [...]
+}
+
 /**
  * 
  * Adding hooks to fire up our functions
@@ -105,3 +124,14 @@ add_action('wp_enqueue_scripts', 'watheq_add_script');
 
 // adding action to fire up menu after wordpress initialization 
 add_action("init", "first_theme_register_custom_menu");
+
+
+/**
+ * Adding filters
+ * by @watheq
+ */
+
+//  filter change excerpt length 
+add_filter('excerpt_length', 'first_theme_excerpt_lenght');
+//  filter change excerpt more
+add_filter('excerpt_more', 'first_theme_change_default_excerpt_more');
