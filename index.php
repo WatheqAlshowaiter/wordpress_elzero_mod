@@ -34,14 +34,25 @@
                         <a href="<?php permalink_link(); ?>" title="<?php the_title_attribute(); ?>">
                             <?php the_post_thumbnail('large', ["class" => "image is-620x300x", "alt" => "place holder image", "title" => "post image"]); ?>
                         </a>
-                        <div class="post-content" >
+                        <div class="post-content">
                             <!-- the_content() uses <!\-- more --\> tag-->
-                            <?php //the_content('Continue reading >>'); ?>
-                            <?php   the_excerpt(); ?>
+                            <?php //the_content('Continue reading >>'); 
+                                    ?>
+                            <?php the_excerpt(); ?>
                             <a href="<?php the_permalink(); ?>" rel="bookmark" title="Complete Reading <?php the_title_attribute(); ?>">Read More...</a>
                         </div>
                         <hr>
-                        <p class="categories"><i class="fi-xnsuxl-label-solid"></i><?php the_category(', ') ?></p>
+                        <p class="post-categories"><i class="fi-xnsuxl-label-solid"></i><?php the_category(', ') ?></p>
+                        <!-- tags native function -->
+                        <p class="post-tags">
+                            <?php
+                                    if (has_tag()) {
+                                        the_tags();
+                                    } else {
+                                        echo "<i>there is no tags in this post</i>";
+                                    }
+                                    ?>
+                        </p>
                     </div>
                 </div>
             <?php endwhile;
@@ -49,29 +60,31 @@
             <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
 
+
     </div> <!-- end .columns -->
+    <div class="columns">
+        <div class="column">
+            <div class="post-pagination">
+                <?php
+                if (get_previous_posts_link()) {
+                    previous_posts_link('<i class="fi-xwslx2-chevron-wide"></i> Prev');
+                } else {
+                    echo "<span class='prev-span'>Prev</span>";
+                }
+
+                if (get_next_posts_link()) {
+                    next_posts_link('Next <i class="fi-xwsrx2-chevron-wide"></i>');
+                } else {
+                    echo "<span class='next-span'>Next</span>";
+                }
+
+                ?>
+            </div> <!-- end .post-pagination -->
+
+        </div><!-- end .column -->
+    </div><!-- end .columns -->
 </div> <!-- end .container-->
 
-<!-- <div class="container"> -->
-<!-- Same as Bootstrap -->
-<!-- <div class="columns is-multiline"> -->
-<!-- .row in Bootstrap -->
-<!-- <div class="column is-6"> -->
-<!-- .col in Bootstrap -->
-<!-- <div class="main-post"> -->
-<!-- important to add .title class in bulma -->
-<!-- <h3 class="post-title title">Just A Test Post</h3> -->
-<!-- <span class="post-author"><i class="fi-xnsuxl-user-solid"></i> Watheq, </span>  -->
-<!-- <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> 13/13/2013, </span>
-                <span class="post-comments"><i class="fi-swslxl-pen"></i> 22 Comments</span>
-                <img src="http://placekitten.com/620/300" class="image is-620x300x" alt="Just a cat placehoder">
-                <span class="post-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, cum? Quae atque pariatur quaerat, assumenda et voluptatum culpa hic dicta eveniet nemo doloribus optio. Praesentium nihil accusantium dolor dignissimos reprehenderit.</span>
-                <hr>
-                <p class="categories"><i class="fi-xnsuxl-label-solid"></i> HTML, CSS, JS</p>
-            </div> -->
-<!-- </div> -->
-<!-- </div>  -->
+
 
 <?php get_footer(); ?>
-
-L

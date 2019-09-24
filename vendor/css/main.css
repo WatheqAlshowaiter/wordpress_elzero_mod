@@ -1,5 +1,6 @@
 body {
     background: #EEE;
+    min-height: 1231px;
 }
 
 /* Start navbar */
@@ -53,7 +54,7 @@ body {
 }
 
 .main-post .post-author, .main-post .post-date, .main-post .post-comments {
-    font-size: 12px; 
+    font-size: 12px;
 }
 
 .main-post img {
@@ -61,9 +62,38 @@ body {
     margin: 10px 0 10px;
 }
 
-.main-post .post-content{
-    line-height: 1.7; 
-    word-wrap: break-word; /** to make words fit just inside .div */ 
+.main-post .post-content {
+    line-height: 1.7;
+    /** to make words fit just inside .div */
+    word-wrap: break-word;
+}
+
+.post-pagination {
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+.post-pagination a, .post-pagination span {
+    display: inline-block;
+    padding: 12px;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.post-pagination a:first-of-type {
+    margin-right: 10px;
+}
+
+.post-pagination span {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.post-pagination .prev-span{
+	margin-right: 10px; 
+}
+.post-pagination .next-span{
+	margin-left: 10px; 
 }
 
 /* End Posts */
