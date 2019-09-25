@@ -33,7 +33,8 @@ body {
 
 /* End Footer */
 
-/* Start Posts */
+
+/* Start Main Post */
 
 .main-post {
     background-color: #FFF;
@@ -78,22 +79,49 @@ body {
     padding: 12px;
     background-color: #FFF;
     border-radius: 5px;
+    font-weight: bold; 
+    /* transition */
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
 }
 
-.post-pagination a:first-of-type {
-    margin-right: 10px;
+.post-pagination a:first-child, .post-pagination span:first-child{
+    /* margin-left: 10px; */
+    float: left; 
+
+}
+.post-pagination a:last-child, .post-pagination span:last-child{
+    /* margin-right: 10px; */
+    float: right; 
+
 }
 
 .post-pagination span {
     opacity: .5;
     cursor: not-allowed;
 }
-
-.post-pagination .prev-span{
-	margin-right: 10px; 
+/* chevron left <  */
+.post-pagination .fi-xwsrxl-chevron-wide {
+    margin-right: 0px;
 }
-.post-pagination .next-span{
-	margin-left: 10px; 
+/* chevron right >  */
+.post-pagination .fi-xwsrxl-chevron-wide {
+    margin-left: 0px;
 }
 
-/* End Posts */
+.post-pagination a:hover {
+    background-color: #333; 
+    color: #FFF; 
+    text-decoration: none; 
+}
+
+/* End Main Post */
+
+/* Start Single Post */
+.main-post .single-post{
+    background-color: aqua; /* for test */
+} 
+
+/* End Single Post */

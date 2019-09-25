@@ -59,21 +59,22 @@
             else : ?>
             <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-
-
     </div> <!-- end .columns -->
+    <div class="is-clearfix">
+
+    </div>
     <div class="columns">
         <div class="column">
             <div class="post-pagination">
                 <?php
                 if (get_previous_posts_link()) {
-                    previous_posts_link('<i class="fi-xwslx2-chevron-wide"></i> Prev');
+                    previous_posts_link('<i class="fi-xwslxl-chevron-wide" area-hidden="true"></i>Prev');
                 } else {
                     echo "<span class='prev-span'>Prev</span>";
                 }
 
                 if (get_next_posts_link()) {
-                    next_posts_link('Next <i class="fi-xwsrx2-chevron-wide"></i>');
+                    next_posts_link('Next<i class="fi-xwsrxl-chevron-wide" area-hidden="true"></i>');
                 } else {
                     echo "<span class='next-span'>Next</span>";
                 }

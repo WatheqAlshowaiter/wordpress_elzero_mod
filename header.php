@@ -4,7 +4,11 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><? bloginfo('name') ?></title>
+          <!--  Dynamic titles-->
+    <title>
+      <?php wp_title('-', 'true', 'right'); ?> 
+      <?php bloginfo('name') ?>
+    </title>
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>">
     <?php wp_head(); ?>
 </head>
@@ -18,8 +22,8 @@
         <nav class="navbar is-black">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item ">
-                        <strong>Navbar</strong>
+                    <a class="navbar-item" href="<?php bloginfo('url')?>">
+                        <strong><?php bloginfo('name')?></strong>
                     </a>
                     <span class="navbar-burger burger" data-target="navbarMenuHeroA">
                         <span></span>
