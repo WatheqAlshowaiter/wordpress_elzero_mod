@@ -4,7 +4,7 @@
 ?>
 
 <!-- Same as .rowBootstrap -->
-<div class="container">
+<div class="container home-page">
 
     <!-- .row in Bootstrap -->
     <div class="columns is-multiline">

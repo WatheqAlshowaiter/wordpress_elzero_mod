@@ -4,7 +4,7 @@
 ?>
 
 <!-- Same as .rowBootstrap -->
-<div class="container">
+<div class="container post-page">
 
     <!-- .row in Bootstrap -->
 
@@ -12,9 +12,11 @@
     <!-- Here is the posts loop -->
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <!--  Here the loop -->
-
             <!-- .col in Bootstrap -->
             <div class="main-post single-post">
+                <!-- To edit post directly for authorize people -->
+                <?php edit_post_link('Edit <i class="fi-xnsuxl-edit-solid"></i>'); ?>
+
                 <!-- the_tile(tags before it , tags after it) -->
                 <!-- the_permalink(): give the link of the post  -->
                 <!-- title: give tooltip to the post the_title_attribute() -->
@@ -62,23 +64,29 @@
         <div class="column">
             <div class="post-pagination">
                 <?php
-                if (get_previous_posts_link()) {
-                    previous_posts_link('<i class="fi-xwslxl-chevron-wide" area-hidden="true"></i>Prev');
+                if (get_previous_post_link()) {
+                    // the last args for make next/prev posts only from the samw taxonimy (category for example)
+                    previous_post_link('%link', '<i class="fi-xwslxl-chevron-wide" area-hidden="true"></i> %title: Previous Article', true, '', 'category');
                 } else {
-                    echo "<span class='prev-span'>Prev</span>";
+                    echo "<span class='prev-span'>Previous Article</span>";
                 }
 
-                if (get_next_posts_link()) {
-                    next_posts_link('Next<i class="fi-xwsrxl-chevron-wide" area-hidden="true"></i>');
+                if (get_next_post_link()) {
+                    // the last args for make next/prev posts only from the samw taxonimy (category for example)
+                    next_post_link('%link', 'Next Article: %title<i class="fi-xwsrxl-chevron-wide" area-hidden="true"></i>', true, '', 'category');
                 } else {
-                    echo "<span class='next-span'>Next</span>";
+                    echo "<span class='next-span'>Next Article</span>";
                 }
+
 
                 ?>
             </div> <!-- end .post-pagination -->
 
         </div><!-- end .column -->
     </div><!-- end .columns -->
+    <hr class="comment-separator">
+
+    <?php comments_template(); ?>
 </div> <!-- end .container-->
 
 

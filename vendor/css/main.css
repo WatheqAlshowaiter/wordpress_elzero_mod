@@ -1,6 +1,6 @@
 body {
     background: #EEE;
-    min-height: 1231px;
+    min-height: 1280px;
 }
 
 /* Start navbar */
@@ -16,10 +16,12 @@ body {
     background-color: #0c0f12;
     color: #FFF;
     padding: 20px;
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    /* I'll change postion to fixed */
+    position: sticky;
+    margin-top: 30px;
 }
 
 .footer a {
@@ -33,53 +35,52 @@ body {
 
 /* End Footer */
 
+/* Start Home Page */
 
-/* Start Main Post */
-
-.main-post {
+.home-page .main-post {
     background-color: #FFF;
     border: solid 1px #d8d8d8;
     padding: 20px;
     margin-bottom: 5px;
 }
 
-.main-post i {
+.home-page .main-post i {
     color: #999;
 }
 
-.main-post h3 {
+.home-page .main-post h3 {
     margin: 0 0 10px;
     font-weight: bold;
     color: #777;
     letter-spacing: -1px;
 }
 
-.main-post .post-author, .main-post .post-date, .main-post .post-comments {
+.home-page .main-post .post-author, .home-page .main-post .post-date, .home-page .main-post .post-comments {
     font-size: 12px;
 }
 
-.main-post img {
+.home-page .main-post img {
     display: block;
     margin: 10px 0 10px;
 }
 
-.main-post .post-content {
+.home-page .main-post .post-content {
     line-height: 1.7;
     /** to make words fit just inside .div */
     word-wrap: break-word;
 }
 
-.post-pagination {
+.home-page .post-pagination {
     margin: 10px 0 30px;
     text-align: center;
 }
 
-.post-pagination a, .post-pagination span {
+.home-page .post-pagination a, .home-page .post-pagination span {
     display: inline-block;
     padding: 12px;
     background-color: #FFF;
     border-radius: 5px;
-    font-weight: bold; 
+    font-weight: bold;
     /* transition */
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
@@ -87,41 +88,243 @@ body {
     -o-transition: all .2s ease-in-out;
 }
 
-.post-pagination a:first-child, .post-pagination span:first-child{
+.home-page .post-pagination a:first-child, .home-page .post-pagination span:first-child {
     /* margin-left: 10px; */
-    float: left; 
-
+    float: left;
 }
-.post-pagination a:last-child, .post-pagination span:last-child{
+
+.home-page .post-pagination a:last-child, .home-page .post-pagination span:last-child {
     /* margin-right: 10px; */
-    float: right; 
-
+    float: right;
 }
 
-.post-pagination span {
+.home-page .post-pagination span {
     opacity: .5;
     cursor: not-allowed;
 }
+
 /* chevron left <  */
-.post-pagination .fi-xwsrxl-chevron-wide {
+
+.home-page .post-pagination .fi-xwsrxl-chevron-wide {
     margin-right: 0px;
 }
+
 /* chevron right >  */
-.post-pagination .fi-xwsrxl-chevron-wide {
+
+.home-page .post-pagination .fi-xwsrxl-chevron-wide {
     margin-left: 0px;
 }
 
-.post-pagination a:hover {
-    background-color: #333; 
-    color: #FFF; 
-    text-decoration: none; 
+.home-page .post-pagination a:hover {
+    background-color: #333;
+    color: #FFF;
+    text-decoration: none;
 }
 
-/* End Main Post */
+/* End Home Page */
+
+/* Start Single Post Page */
+
+.post-page .main-post {
+    background-color: #FFF;
+    border: solid 1px #d8d8d8;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.post-page .main-post i {
+    color: #999;
+}
+
+.post-page .main-post h3 {
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: #777;
+    letter-spacing: -1px;
+}
+
+.post-page .main-post .post-author, .post-page .main-post .post-date, .post-page .main-post .post-comments {
+    font-size: 12px;
+}
+
+.post-page .main-post img {
+    display: block;
+    margin: 10px 0 10px;
+}
+
+.post-page .main-post .post-content {
+    line-height: 1.7;
+    /** to make words fit just inside .div */
+    word-wrap: break-word;
+}
+
+.post-page .post-pagination {
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+.post-page .post-pagination a, .post-page .post-pagination span {
+    display: inline-block;
+    padding: 12px;
+    background-color: #FFF;
+    border-radius: 5px;
+    font-weight: bold;
+    /* transition */
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.post-page .post-pagination a:first-child, .post-page .post-pagination span:first-child {
+    /* margin-left: 10px; */
+    float: left;
+}
+
+.post-page .post-pagination a:last-child, .post-page .post-pagination span:last-child {
+    /* margin-right: 10px; */
+    float: right;
+}
+
+.post-page .post-pagination span {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* chevron left <  */
+
+.post-page .post-pagination .fi-xwsrxl-chevron-wide {
+    margin-right: 0px;
+}
+
+/* chevron right >  */
+
+.post-page .post-pagination .fi-xwsrxl-chevron-wide {
+    margin-left: 0px;
+}
+
+.post-page .post-pagination a:hover {
+    background-color: #333;
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* End Single Post Page */
 
 /* Start Single Post */
-.main-post .single-post{
-    background-color: aqua; /* for test */
-} 
+
+.post-page .main-post {
+    position: relative;
+}
+
+.post-page .main-post .post-edit-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #EEE;
+    border-radius: 0 0 0 10px;
+}
+
+.post-page .main-post .post-edit-link i {
+    color: #337ab7;
+    margin-left: 2px
+}
 
 /* End Single Post */
+
+/* Start Comments List  */
+
+.my-comments-list ul, .my-comments-listt ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments-count {
+    background-color: #DDD;
+    font-weight: bold;
+    padding: 15px;
+    color: #848484;
+    border: 1px solid #9a8e8e;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.my-comments-list .comment .says {
+    display: none;
+}
+
+.my-comments-list .comment .comment-meta {
+    font-size: 12px;
+}
+
+.my-comments-list .comment .img {
+    padding: 3px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.my-comments-list .comment p {
+    margin-top: 8px;
+    color: #6f6f6f;
+}
+
+/* Level 1 comments */
+
+.my-comments-list>.comment {
+    padding: 10px;
+    background-color: #FFF;
+    /* white */
+    border: 1px solid #DDD;
+    /* grey */
+    margin-bottom: 5px;
+}
+
+/* Level 2 comments */
+
+.my-comments-list>.comment>.children>.comment {
+    padding: 10px;
+    background-color: #EEE;
+    /* white */
+    border: 1px solid #BBB;
+    /* grey */
+    margin-bottom: 5px;
+}
+
+/* level 3 comments  */
+
+.my-comments-list>.comment>.children>.comment .comment {
+    padding: 10px;
+    background-color: #CCC;
+    /* white */
+    border: 1px solid gray;
+    /* grey */
+    margin-bottom: 5px;
+}
+
+/* Comment form */
+
+/* make Comment box label in separate line  */
+
+.comment-respond label {
+    display: block;
+}
+
+.comment-respond input[type="text"], .comment-respond textarea {
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.comment-respond textarea {
+    height: 200px;
+    resize: none;
+}
+
+/* End Start Comments List  */
