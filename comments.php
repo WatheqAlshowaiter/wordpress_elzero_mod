@@ -20,7 +20,14 @@ else :
             ?>
     </ul>
     <hr class="comment-separator">
-    <?php comment_form();   ?>
+    <?php
+        $comment_form_args = array(
+            'title_reply' => "Post Your Comment",
+            "title_reply_to" => "Add a replay to [%s]",
+            "class_submit" => "button is-link",
+            "comment_notes_before" => ''
+        );
+        comment_form($comment_form_args);   ?>
 <?
 
 endif;
