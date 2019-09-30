@@ -60,8 +60,35 @@
     <div class="is-clearfix">
 
     </div>
+    <hr class="comment-separator">
+
+
+    <div class="columns">
+        <div class="column is-2">
+            <?php
+            $avatar_img_args = array(
+                "class" => "image has-image-centered"
+            );
+            ?>
+            <?php echo get_avatar(get_the_author_meta('id'), "80", '', "Author Avatar Picture", $avatar_img_args) ?>
+
+        </div>
+        <div class="column is-10 author-info">
+            <h4>
+                <?php the_author_meta('first_name'); ?>
+                <?php the_author_meta('last_name'); ?>
+                ( <span class="nickname"><?php the_author_meta('nickname'); ?></span> )
+            </h4>
+
+            <?php if (get_the_author_meta('description')) : ?>
+                <p> <?php the_author_meta('description'); ?></p>
+            <?php else : echo "No bio for this user"; ?>
+            <?php endif; ?>
+        </div>
+    </div>
     <div class="columns">
         <div class="column">
+
             <div class="post-pagination">
                 <?php
                 if (get_previous_post_link()) {
