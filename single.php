@@ -28,7 +28,6 @@
                 <!-- post author  -->
                 <span class="post-author"><i class="fi-xnsuxl-user-solid"></i><?php the_author_posts_link() ?>, </span>
                 <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> <?php the_time('d -  m - Y'); ?>, </span>
-                <span class="post-date"><i class="fi-xnsuxl-calendar-solid"></i> <?php the_time('d -  m - Y'); ?>, </span>
                 <span class="post-comments"><i class="fi-swslxl-pen"></i> <?php comments_popup_link('No Comment', "one commnet", "% Comments", "comment-url", "Comment disabled") ?></span>
                 <!-- post thunmbnail with link to the post -->
                 <a href="<?php permalink_link(); ?>" title="<?php the_title_attribute(); ?>">
@@ -63,7 +62,7 @@
     <hr class="comment-separator">
 
 
-    <div class="columns">
+    <div class="columns is-multiline">
         <div class="column is-2">
             <?php
             $avatar_img_args = array(
@@ -84,8 +83,23 @@
                 <p> <?php the_author_meta('description'); ?></p>
             <?php else : echo "No bio for this user"; ?>
             <?php endif; ?>
+
         </div>
+        <div class="author-infos column is-4">
+            <p class="author-stats">
+                <i class="fi-xnsuxl-label-solid"></i>
+                User Posts: <span class="post-count"> <?php echo count_user_posts(get_the_author_meta('id')); ?></span>
+            </p>
+            <p>
+                <i class="fi-xnsuxl-user-solid"></i>
+                User Link: <span class=""> <?php the_author_posts_link(); ?></span>
+
+            </p>
+        </div>
+
+
     </div>
+
     <div class="columns">
         <div class="column">
 
@@ -110,6 +124,8 @@
             </div> <!-- end .post-pagination -->
 
         </div><!-- end .column -->
+
+
     </div><!-- end .columns -->
     <hr class="comment-separator">
 

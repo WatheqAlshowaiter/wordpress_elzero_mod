@@ -247,13 +247,25 @@ body {
 }
 
 .author-info h4 .nickname {
-    color: #116688;
+    color: blueviolet;
 }
 
 .author-info p {
     font-size: 17px;
     line-height: 1.6;
     color: #777;
+}
+
+.author-infos {
+    margin-left: 55px;
+}
+
+.author-infos p {
+    color: #777;
+}
+
+.author-infos p .post-count {
+    color:  blueviolet; 
 }
 
 /* End Author Meta */
@@ -387,3 +399,23 @@ body {
 }
 
 /* End Start Comments List  */
+
+/* Start styling Author Page */
+
+/* End styling Author Page */
+
+/* the main container */
+
+.author-page .author-meta {
+    background: #FFF;
+    margin: 20px;
+    padding: 20px;
+}
+
+/*  Profile header (h1) */
+
+.author-page .profile-header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
