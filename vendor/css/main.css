@@ -265,7 +265,7 @@ body {
 }
 
 .author-infos p .post-count {
-    color:  blueviolet; 
+    color: blueviolet;
 }
 
 /* End Author Meta */
@@ -402,20 +402,45 @@ body {
 
 /* Start styling Author Page */
 
-/* End styling Author Page */
-
 /* the main container */
 
 .author-page .author-meta {
     background: #FFF;
-    margin: 20px;
+    margin: 10px 0;
     padding: 20px;
+    border: 1px solid #ddd;
 }
 
 /*  Profile header (h1) */
 
 .author-page .profile-header {
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
+    letter-spacing: -3px;
 }
+
+.author-page .author-meta .author-names span {
+    color: #6b6969;
+}
+
+.author-page .author-meta .author-names .nickname {
+    color: black;
+}
+
+.author-page .author-stats .stats {
+    background: #FFF;
+    /* margin: 5px 20px; */
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.author-page .author-stats .stats span {
+    display: block;
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+/* End styling Author Page */
