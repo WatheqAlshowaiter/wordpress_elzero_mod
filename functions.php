@@ -101,7 +101,11 @@ function register_custom_menu()
  */
 function first_theme_excerpt_lenght($lenght)
 {
-    return 5;
+    if (is_author()) {
+        return 10;
+    } else {
+        return 20;
+    }
 }
 
 /**

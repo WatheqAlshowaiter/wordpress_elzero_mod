@@ -443,4 +443,86 @@ body {
     font-size: 50px;
 }
 
+/* Posts show  */
+
+.author-page .all-posts-header-section {
+    background: #DDD;
+    padding: 18px;
+    text-align: center;
+    font-size: 29px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.author-page .all-posts-header-section h3 {
+    font-weight: bold;
+}
+
+.author-page .post-show {
+    background: #FFF;
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.author-page .post-show .img-section img {
+    width: 100%
+}
+
+.author-page .post-show .text-section {
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+.author-page .post-show .text-section .post-title {
+    font-size: 18px;
+}
+
+.author-page .post-show .text-section .post-content {
+    font-size: 15px;
+}
+
+/* start author comments  */
+
+.author-page .author-comments .comment-header-section {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.author-page .author-comments .comment-header-section .comments-header {
+    background: #DDD;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.author-page .author-comments .comment-listing {
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    margin-left: 9px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.author-page .author-comments .comment-listing .comment-title {
+    font-size: 24px;
+    /* margin: auto; */
+    /* margin-bottom: 0; */
+    /* box-sizing: content-box; */
+}
+
+.author-page .author-comments .comment-listing .comment-date {
+    font-size: 12px;
+    color: #635f5f;
+}
+
+.author-page .author-comments .comment-listing .comment-content {
+    color: #444;
+    letter-spacing: 1px;
+}
+
+/* end author comments  */
+
 /* End styling Author Page */
