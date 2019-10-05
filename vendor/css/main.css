@@ -121,6 +121,42 @@ body {
     text-decoration: none;
 }
 
+/* Start Numbering Pagination  */
+
+.home-page .number-pagination {
+    margin: 5px auto 25px;
+    font-family: Tahoma, Arial;
+    font-size: 16px;
+}
+
+/* page-numbers is default from wordperss  */
+
+.home-page .number-pagination .page-numbers {
+    display: inline-block;
+    background-color: #8e8e8e;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    /* make transition go well with diiferent browsers */
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/* current page and hover page has same color  */
+
+.home-page .number-pagination .page-numbers.current {
+    background-color: #2980b9;
+}
+
+.home-page .number-pagination .page-numbers:hover {
+    background-color: #2980b9;
+}
+
+/* End Numbering Pagination  */
+
 /* End Home Page */
 
 /* Start Single Post Page */
@@ -230,6 +266,44 @@ body {
     color: #337ab7;
     margin-left: 2px
 }
+
+/* Start Random Posts */
+
+.post-page .random-posts-div {}
+
+.post-page .random-posts-div .rand-head, .post-page .random-posts-div .no-rand {
+    text-align: center;
+    padding: 10px;
+    background: #FFF;
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #777;
+    border: 1px solid #DDD;
+}
+
+.post-page .random-posts-div .no-rand {
+    color: red;
+}
+
+.post-page .random-posts-div .rand-posts {
+    margin-top: 10px;
+    background: #FFF;
+    padding: 5px;
+    border: 1px solid #DDD;
+}
+
+.post-page .random-posts-div .rand-posts .rand-post {
+    padding: 2px 20px;
+}
+
+.post-page .random-posts-div .rand-posts .rand-post .rand-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* End Random Posts */
 
 /* End Single Post */
 
@@ -526,3 +600,28 @@ body {
 /* end author comments  */
 
 /* End styling Author Page */
+
+/* Start 404 Page  */
+
+.not-found {
+    text-align: center;
+}
+
+.not-found img {
+    margin-top: 50px;
+    border: 1px solid #333333;
+}
+
+.not-found .lead {
+    margin-top: 20px;
+    font-size: 58px;
+    letter-spacing: -2px;
+}
+
+.not-found .paragraph {
+    font-size: 25px;
+    font-style: italic;
+    color: #888;
+}
+
+/* End 404 Page  */

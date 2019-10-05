@@ -59,6 +59,46 @@
     <div class="is-clearfix">
 
     </div>
+    <div class="random-posts-div">
+        <?php
+        $this_post_id = get_queried_object_id();
+        $cateories_for_this_post = wp_get_post_categories($this_post_id);
+        $rand_post_num  = 3;
+        $rand_post_args = array(
+            'posts_per_page' => $rand_post_num,
+            'cat' => $cateories_for_this_post,
+            'post_status' => 'publish',  // need to be published 
+            'orderby' => 'rand',  // give random posts 
+            'post__not_in' =>  array($this_post_id)
+        );
+
+        $rand_posts = new WP_Query($rand_post_args);
+
+        if ($rand_posts->have_posts()) : ?>
+            <h4 class="rand-head"> if you like this, you will like these</h4>
+            <?php
+                echo '<ul class="rand-posts">';
+                while ($rand_posts->have_posts()) :
+                    $rand_posts->the_post(); ?>
+                <li class="rand-post">
+                    <a class="rand-title" href="<?php permalink_link() ?>">
+                        <?php echo get_the_title() ?>
+                    </a>
+                </li>
+
+            <?php endwhile; ?>
+            </ul>
+        <?php
+        else :
+            echo "<h4 class='no-rand'>no similer posts are found!<h4>";
+        endif;
+        /* Restore original Post Data */
+        wp_reset_postdata();
+        ?>
+
+
+    </div>
+
     <hr class="comment-separator">
 
 

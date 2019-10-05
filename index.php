@@ -84,6 +84,10 @@
 
         </div><!-- end .column -->
     </div><!-- end .columns -->
+
+    <div class="number-pagination">
+                <?php echo  watheq_number_pagination(); ?> 
+    </div>
 </div> <!-- end .container-->
 
 

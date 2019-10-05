@@ -117,6 +117,32 @@ function first_theme_change_default_excerpt_more($lenght)
     return '...'; // instead of [...]
 }
 
+
+/**
+ * Numbering pagination
+ * by @watheq 
+ *  
+ */
+function watheq_number_pagination()
+{
+    global $wp_query;
+
+    $all_pages = $wp_query->max_num_pages;
+    $current_page = max(1, get_query_var('paged'));
+
+    if ($all_pages   > 1) {
+        return paginate_links(array(
+            'base' => get_pagenum_link() . '%_%',
+            'format' => 'page/%#%', // I deleted nut nothing happened
+            'current' => $current_page,
+            'mid_size' => 1,
+            'end_size' => 1,
+            'prev_text' => '<<', // just for the sake of make it differnt
+            'next_text' => '>>'
+        ));
+    }
+}
+
 /**
  * 
  * Adding hooks to fire up our functions
