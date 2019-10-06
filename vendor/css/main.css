@@ -472,6 +472,22 @@ body {
     margin-top: 10px;
 }
 
+/* Start Comment of author  */
+
+.post-page .bypostauthor {
+	position: relative;
+	background: #d4d2ec;
+}
+
+.post-page .bypostauthor .comment-author cite:after{
+	
+	content: ' [Author]'; 
+	font-weight: bold; 
+	
+}
+
+/* End Comment of author  */
+
 /* End Start Comments List  */
 
 /* Start styling Author Page */
