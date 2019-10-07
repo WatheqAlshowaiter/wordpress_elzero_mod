@@ -103,6 +103,8 @@ function first_theme_excerpt_lenght($lenght)
 {
     if (is_author()) {
         return 10;
+    } else if (is_category()) {
+        return 15;
     } else {
         return 20;
     }
