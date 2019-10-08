@@ -1,7 +1,6 @@
 <?php get_header() ?>
 
-<?php // get_search_form(); 
-?>
+<?php    include (get_template_directory() . "/includes/breadcrumb.php") ; ?>
 
 <!-- Same as .rowBootstrap -->
 <div class="container post-page">

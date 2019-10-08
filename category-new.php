@@ -44,7 +44,7 @@
                                     <?php the_post_thumbnail('large', ["class" => "image is-620x300x", "alt" => "place holder image", "title" => "post image"]); ?>
                                 </a>
                             </div>
-                            <div class="column is-7 post-text" >
+                            <div class="column is-7 post-text">
                                 <h3 class="post-title title">
                                     <a href="<?php permalink_link(); ?> " rel="bookmark" title="Permenant to <? the_title_attribute(); ?>">
                                         <?php the_title(); ?>
@@ -83,7 +83,11 @@
         </div>
 
         <div class="column is-3 sidebar-cat">
-
+            <?php if (is_active_sidebar('main-sidebar')) {
+                // dynamic_sidebar('main-sidebar');
+                get_sidebar('new'); 
+            }
+            ?>
         </div>
     </div> <!-- end .columns -->
     <div class="is-clearfix">

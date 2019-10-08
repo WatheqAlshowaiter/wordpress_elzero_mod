@@ -673,7 +673,53 @@ body {
 }
 
 .new-cat .sidebar-cat {
-    background: #2980b9;
+    /* background: #2980b9; */
 }
 
 /* End new Category special design */
+
+
+/* Start Sidbar-new category styling  */
+
+.sidebar-new .widget {
+	background: #FFF;
+	margin-bottom: 15px;
+	border: 1px solid #d8d8d8;
+}
+
+.sidebar-new .widget .widget-title {
+	margin: 0;
+	padding: 10px;
+	background: #6998f0;
+	color: white;
+	font-weight: bold;
+    letter-spacing: 0px;
+    font-size: 20px;
+
+}
+
+.sidebar-new .widget .widget-content {
+	margin: 0;
+	padding: 10px;
+	color: #756f6f;
+}
+
+/* Edn Sidbar-new category styling   */
+
+
+/* Start breadcrumb */
+.breadcrumb-holder.container{ 
+	background-color: #d8d8d8; 
+	margin-right: 0; 
+	margin-left: 0; 
+} 
+.breadcrumb-holder .container .breadcrumb{
+	background-color: #d8d8d8; 
+    border-radius: 0; padding: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+/* End breadcrumb */
+
+
